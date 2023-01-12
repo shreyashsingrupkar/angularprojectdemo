@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div>
+                <div class="text-center">
+                    <div class="container">
+                        <img src="../../../assets/examlogo.png" alt="Exam Logo" width="50" height="50">
+                    </div>
+                    <h3>
+                        Login Here
+                    </h3>
+                </div>
+                {{LoginData|json}}
+                <div class="container col-md-6 offset-md-3 ">
+                    <form (ngSubmit)="Login()">
+                        <div class="form-group ">
+                            <label for="userNameInput">Username</label>
+                            <input type="text" class="form-control form-control-sm" [(ngModel)]="LoginData.username" name="userNameInput" id="userNameInput" placeholder="Enter username">
+                        </div>
+                        <div class="form-group my-1">
+                            <label for="passWordInput">Password</label>
+                            <input type="password" class="form-control form-control-sm" [(ngModel)]="LoginData.password" name="passWordInput" id="passWordInput" placeholder="Enter password">
+                        </div>
+
+
+                        <div class="form-group my-2">
+                            <div class="row">
+                                <div class="col-6 d-flex justify-content-end">
+                                    <button type="submit" class="btn btn-success btn-sm">Login</button>
+                                </div>
+                                <div class="col-6 d-flex justify-content-start">
+                                    <button type="reset" class="btn btn-secondary btn-sm">Reset</button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
